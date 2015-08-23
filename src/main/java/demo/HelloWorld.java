@@ -8,6 +8,6 @@ import rx.Observable;
  */
 public class HelloWorld {
     public static void main(String[] args) {
-        Observable.just("Hello World").subscribe(s -> System.out.println(s));
+        Observable.just("Hello World").subscribe(System.out::println);
     }
 }
