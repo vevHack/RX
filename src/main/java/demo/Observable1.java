@@ -31,6 +31,7 @@ public class Observable1 {
                     aSubscriber.onNext("value" + i);
                 }
             }
+            //发送完所有值之后，完成
             if (aSubscriber.isUnsubscribed()) {
                 aSubscriber.onCompleted();
             }
