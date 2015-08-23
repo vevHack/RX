@@ -24,7 +24,7 @@ public class Observable1 {
     }
 
     /*通过create方法来创建一个Observable对象*/
-//    同步例子
+//    同步实例
     public static Observable customObservableBlocking() {
 
         return Observable.create(aSubscriber -> {
@@ -36,6 +36,14 @@ public class Observable1 {
             //发送完所有值之后，完成
             if (!aSubscriber.isUnsubscribed()) {
                 aSubscriber.onCompleted();
+            }
+        });
+    }
+//    异步实例
+    public static Observable customObservableNonBlocking(){
+        return Observable.create(subscriber -> {
+            for (int i = 0; i <50 ; i++) {
+                //fuck 嵌套lambda怎么写？
             }
         });
     }
