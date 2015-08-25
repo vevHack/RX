@@ -15,6 +15,7 @@ public class HelloWorld {
     }
     public static void cache(){
         Random random = new Random();
+
         Observable<Integer> observable = Observable.range(1, 100).map(random::nextInt).cache();
         observable.subscribe(System.out::println);
         System.out.println("cache..................");
